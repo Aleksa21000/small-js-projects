@@ -1,0 +1,39 @@
+.acc {
+  width: 500px;
+  border: 1px solid #000;
+}
+.acc.open .acc_top-rigth {
+  transform: rotate(45deg);
+}
+.acc.open .acc_bottom-inner p {
+  opacity: 1;
+  transform: none;
+}
+.acc_top {
+  display: flex;
+  padding: 15px;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.acc_top-left {
+}
+.acc_top-rigth {
+  transition: 0.5s transform;
+  will-change: transform;
+}
+.acc_bottom {
+  transition: 0.5s height;
+  height: 0;
+  overflow: hidden;
+}
+.acc_bottom-inner {
+  padding: 15px;
+  border-top: 1px solid #000;
+}
+
+.acc_bottom-inner p {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: 0.5s opacity, 0.5s transform;
+}
