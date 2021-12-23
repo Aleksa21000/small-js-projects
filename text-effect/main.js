@@ -1,7 +1,9 @@
-let text = document.querySelector('.title').textContent;
 const title = document.querySelector('.title');
+let text = title.textContent;
 
+title.childNodes[0].remove();
 const textArr = text.split("");
+
 textArr.forEach(function(tx) {
     const span = document.createElement('span');
     span.classList.add('.text')
@@ -10,13 +12,11 @@ textArr.forEach(function(tx) {
     title.appendChild(span);
 
 });
-title.childNodes[0].remove();
-
 
 gsap.fromTo('span',
 {
     top: -30,
-    left: 30,
+    left: 70,
     opacity:0
 },
 
@@ -25,6 +25,6 @@ gsap.fromTo('span',
     left:0,
     opacity:1,
     stagger: {
-       each: 0.02
+       each: 0.015
     }
 });
